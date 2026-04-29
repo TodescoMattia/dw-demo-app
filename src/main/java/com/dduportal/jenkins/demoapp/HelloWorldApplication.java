@@ -14,7 +14,7 @@ public class HelloWorldApplication extends Application<HelloWorldConfiguration> 
 
     @Override
     public String getName() {
-        return "ciao-mondo";
+        return "hello-world";
     }
 
     @Override
@@ -32,7 +32,7 @@ public class HelloWorldApplication extends Application<HelloWorldConfiguration> 
         );
         final TemplateHealthCheck healthCheck =
                 new TemplateHealthCheck(configuration.getTemplate());
-        environment.healthChecks().register("template", healthCheck);
+        .healthChecks().register("template", healthCheck);
         environment.jersey().register(resource);
         environment.jersey().setUrlPattern("/api/*");
     }
